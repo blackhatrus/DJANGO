@@ -1,0 +1,18 @@
+# Start Tor-socks-proxy
+docker run -d --restart=always --name tor-socks-proxy -p 127.0.0.1:9150:9150/tcp peterdavehello/tor-socks-proxy:latest
+
+# If you already setup the instance before (not the first time) but it's in stopped state, 
+# you can just start it instead of creating a new one:
+docker start tor-socks-proxy
+
+# change tor-socks-proxy network to django_default network
+docker network connect django_default tor-socks-proxy
+
+# back up postgresql
+docker exec pgsql-0 pg_dump -U postgres <database_name> > backup.sql
+
+# restore postgresql
+docker exec -i <postgres_container_name> psql -U postgres -d <database_name> < backup.sql
+
+
+

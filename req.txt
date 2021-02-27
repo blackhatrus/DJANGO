@@ -1,0 +1,19 @@
+Django==3.1.5
+celery==5.0.5
+redis==3.5.3
+psycopg2==2.8.6
+requests==2.25.1
+django-autoslug==1.9.8
+django-celery-beat== 2.2.0
+django-timezone-field==4.1.1
+djangorestframework==3.12.2
+django-debug-toolbar==3.2
+django-debug-toolbar-force==0.1.8
+django-defender==0.8.0
+markdown==3.3.3
+Unidecode==1.1.2
+cfscrape==2.1.1
+PySocks
+beautifulsoup4
+lxml
+python-dotenv==0.15.0

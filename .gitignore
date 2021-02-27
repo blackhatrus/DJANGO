@@ -1,0 +1,8 @@
+*.pyc
+__pycache__
+Docker-compose.yml
+Dockerfile
+.env
+.docker
+.vscode
+
